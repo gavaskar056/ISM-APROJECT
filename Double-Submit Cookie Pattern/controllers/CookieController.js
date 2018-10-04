@@ -28,7 +28,7 @@ router.post("/ValidatingTocken",(req,res)=> {
     var sessionId = req.cookies.sesion_id;
     var token = req.body.CSRFtoken;
     var Cookietoken = req.cookies.Token_Value;
-    if (sessionId == sesion_id &&  token == Token_Value){
+    if (sessionId == sesion_id &&  token == Cookietoken){
         res.redirect('/app/Form?failed=false');
     }
     else{
